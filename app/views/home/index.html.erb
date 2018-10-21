@@ -1,0 +1,54 @@
+<h2>Weather Forecast</h2>
+<%= form_for @forecast, :url => {:controller => "home", :action => "index"} do |f| %>
+  <%= f.select(:request_location) do %>
+    <% [['Sydney', 'sydney'], ['Melbourne', 'melbourne']].each do |c| -%>
+      <%= content_tag(:option, c.first, value: c.last) %>
+    <% end %>
+  <% end %>
+  <%= f.select(:temp_unit) do %>
+    <% [['CELSIUS', 'c'], ['FAHRENHEIT', 'f']].each do |c| -%>
+      <%= content_tag(:option, c.first, value: c.last) %>
+    <% end %>
+  <% end %>
+  <%= f.submit "Refresh" %>
+<% end %>
+<p/>
+<br>
+<% if @weather_feed.present? %>
+  <p>
+    <%= @weather_feed.title %>
+    </br>
+    Temperature: <%= @weather_feed.condition.temp %>°<%= @weather_feed.units.temperature %>
+    </br>
+    Description: <%= @weather_feed.condition.text %>
+    </br>
+    SunRise: <%= @weather_feed.astronomy.sunrise %> SunSet: <%= @weather_feed.astronomy.sunset %>
+    Humidity: <%= @weather_feed.atmosphere.humidity %>%
+    Visibility: <%= @weather_feed.atmosphere.visibility %><%= @weather_feed.units.distance %>
+    Pressure: <%= @weather_feed.atmosphere.pressure %><%= @weather_feed.units.pressure %>
+    Barometer: <%= @weather_feed.atmosphere.barometer %>
+    Wind Chill: <%= @weather_feed.wind.chill %><%= @weather_feed.units.speed %>
+    Wind Direction: <%= @weather_feed.wind.direction %>°
+    Wind Speed:  <%= @weather_feed.wind.speed %><%= @weather_feed.units.speed %>
+  </p>
+  <table>
+    <thead>
+      <th>Date</th>
+      <th>Day</th>
+      <th>description</th>
+      <th>Low Temperature</th>
+      <th>High Temperature</th>
+    </thead>
+    <tbody>
+      <% @weather_feed.forecasts.each do |f| %>
+        <tr>
+          <td><%= f.date.to_date %></td>
+          <td><%= f.day %></td>
+          <td><%= f.text %></td>
+          <td><%= f.low %>°<%= @weather_feed.units.temperature %></td>
+          <td><%= f.high %>°<%= @weather_feed.units.temperature %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
