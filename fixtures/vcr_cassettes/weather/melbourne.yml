@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text=%27melbourne%27)%20and%20u=%27f%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - query.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=utf-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sun, 21 Oct 2018 11:16:26 GMT
+      Age:
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Via:
+      - http/1.1 media-router-omega66.prod.media.gq1.yahoo.com (ApacheTrafficServer
+        [cMsSf ])
+      Server:
+      - ATS
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2018-10-21T11:16:26Z","lang":"en-US","results":{"channel":{"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"title":"Yahoo!
+        Weather - Melbourne, VIC, AU","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1103816/","description":"Yahoo!
+        Weather for Melbourne, VIC, AU","language":"en-us","lastBuildDate":"Sun, 21
+        Oct 2018 10:16 PM AEDT","ttl":"60","location":{"city":"Melbourne","country":"Australia","region":"
+        VIC"},"wind":{"chill":"54","direction":"113","speed":"8"},"atmosphere":{"humidity":"75","pressure":"1011.0","rising":"0","visibility":"16.1"},"astronomy":{"sunrise":"6:26
+        am","sunset":"7:43 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Melbourne, VIC, AU at 09:00 PM AEDT","lat":"-37.865799","long":"145.102829","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1103816/","pubDate":"Sun,
+        21 Oct 2018 09:00 PM AEDT","condition":{"code":"31","date":"Sun, 21 Oct 2018
+        09:00 PM AEDT","temp":"54","text":"Clear"},"forecast":[{"code":"34","date":"21
+        Oct 2018","day":"Sun","high":"63","low":"47","text":"Mostly Sunny"},{"code":"32","date":"22
+        Oct 2018","day":"Mon","high":"76","low":"46","text":"Sunny"},{"code":"28","date":"23
+        Oct 2018","day":"Tue","high":"64","low":"53","text":"Mostly Cloudy"},{"code":"30","date":"24
+        Oct 2018","day":"Wed","high":"62","low":"48","text":"Partly Cloudy"},{"code":"30","date":"25
+        Oct 2018","day":"Thu","high":"74","low":"43","text":"Partly Cloudy"},{"code":"30","date":"26
+        Oct 2018","day":"Fri","high":"67","low":"51","text":"Partly Cloudy"},{"code":"28","date":"27
+        Oct 2018","day":"Sat","high":"64","low":"47","text":"Mostly Cloudy"},{"code":"28","date":"28
+        Oct 2018","day":"Sun","high":"68","low":"50","text":"Mostly Cloudy"},{"code":"30","date":"29
+        Oct 2018","day":"Mon","high":"68","low":"54","text":"Partly Cloudy"},{"code":"30","date":"30
+        Oct 2018","day":"Tue","high":"63","low":"53","text":"Partly Cloudy"}],"description":"<![CDATA[<img
+        src=\"http://l.yimg.com/a/i/us/we/52/31.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR
+        />Clear\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Sun - Mostly Sunny. High:
+        63Low: 47\n<BR /> Mon - Sunny. High: 76Low: 46\n<BR /> Tue - Mostly Cloudy.
+        High: 64Low: 53\n<BR /> Wed - Partly Cloudy. High: 62Low: 48\n<BR /> Thu -
+        Partly Cloudy. High: 74Low: 43\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1103816/\">Full
+        Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n<BR />\n]]>","guid":{"isPermaLink":"false"}}}}}}'
+    http_version: 
+  recorded_at: Sun, 21 Oct 2018 11:16:27 GMT
+recorded_with: VCR 4.0.0

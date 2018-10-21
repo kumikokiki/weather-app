@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text=%27sydney%27)%20and%20u=%27c%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - query.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=utf-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sun, 21 Oct 2018 11:16:24 GMT
+      Age:
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Via:
+      - http/1.1 media-router-omega20.prod.media.gq1.yahoo.com (ApacheTrafficServer
+        [cMsSf ])
+      Server:
+      - ATS
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2018-10-21T11:16:24Z","lang":"en-US","results":{"channel":{"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"title":"Yahoo!
+        Weather - Sydney, NSW, AU","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1105779/","description":"Yahoo!
+        Weather for Sydney, NSW, AU","language":"en-us","lastBuildDate":"Sun, 21 Oct
+        2018 10:16 PM AEDT","ttl":"60","location":{"city":"Sydney","country":"Australia","region":"
+        NSW"},"wind":{"chill":"61","direction":"158","speed":"12.87"},"atmosphere":{"humidity":"81","pressure":"34304.13","rising":"0","visibility":"25.91"},"astronomy":{"sunrise":"6:7
+        am","sunset":"7:14 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Sydney, NSW, AU at 09:00 PM AEDT","lat":"-33.856281","long":"151.020966","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1105779/","pubDate":"Sun,
+        21 Oct 2018 09:00 PM AEDT","condition":{"code":"29","date":"Sun, 21 Oct 2018
+        09:00 PM AEDT","temp":"16","text":"Partly Cloudy"},"forecast":[{"code":"47","date":"21
+        Oct 2018","day":"Sun","high":"19","low":"13","text":"Scattered Thunderstorms"},{"code":"32","date":"22
+        Oct 2018","day":"Mon","high":"23","low":"11","text":"Sunny"},{"code":"30","date":"23
+        Oct 2018","day":"Tue","high":"28","low":"11","text":"Partly Cloudy"},{"code":"28","date":"24
+        Oct 2018","day":"Wed","high":"18","low":"15","text":"Mostly Cloudy"},{"code":"28","date":"25
+        Oct 2018","day":"Thu","high":"22","low":"14","text":"Mostly Cloudy"},{"code":"26","date":"26
+        Oct 2018","day":"Fri","high":"30","low":"14","text":"Cloudy"},{"code":"28","date":"27
+        Oct 2018","day":"Sat","high":"22","low":"13","text":"Mostly Cloudy"},{"code":"11","date":"28
+        Oct 2018","day":"Sun","high":"19","low":"17","text":"Showers"},{"code":"47","date":"29
+        Oct 2018","day":"Mon","high":"21","low":"17","text":"Scattered Thunderstorms"},{"code":"30","date":"30
+        Oct 2018","day":"Tue","high":"22","low":"16","text":"Partly Cloudy"}],"description":"<![CDATA[<img
+        src=\"http://l.yimg.com/a/i/us/we/52/29.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR
+        />Partly Cloudy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Sun - Scattered
+        Thunderstorms. High: 19Low: 13\n<BR /> Mon - Sunny. High: 23Low: 11\n<BR />
+        Tue - Partly Cloudy. High: 28Low: 11\n<BR /> Wed - Mostly Cloudy. High: 18Low:
+        15\n<BR /> Thu - Mostly Cloudy. High: 22Low: 14\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-1105779/\">Full
+        Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n<BR />\n]]>","guid":{"isPermaLink":"false"}}}}}}'
+    http_version: 
+  recorded_at: Sun, 21 Oct 2018 11:16:25 GMT
+recorded_with: VCR 4.0.0

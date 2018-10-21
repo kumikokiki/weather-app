@@ -40,6 +40,15 @@ Capybara.configure do |config|
   config.default_driver = :selenium
 end
 
+WebMock.disable_net_connect!(allow_localhost: true)
+
+VCR.configure do |config|
+  config.ignore_localhost = true
+  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.allow_http_connections_when_no_cassette = true
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

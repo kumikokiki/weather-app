@@ -53,8 +53,10 @@ group :test do
   gem 'capybara', '~> 3.9.0' # Integration test
   gem 'database_cleaner', '~> 1.7.0'
   gem 'rails-controller-testing', '~> 1.0.2'
-  gem "selenium-webdriver"
-  gem "chromedriver-helper", '~> 2.1.0'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper', '~> 2.1.0'
+  gem 'webmock', '~> 3.4.2'
+  gem 'vcr', '~> 4.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
