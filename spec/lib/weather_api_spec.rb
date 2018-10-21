@@ -52,7 +52,7 @@ RSpec.describe WeatherApi do
       let(:valid_unit) { WeatherApi::Units::FAHRENHEIT  }
       let(:subject) { WeatherApi.send(:valid_unit, valid_unit) }
       it "does not raise exception" do
-        expect{subject}.not_to raise_error(WeatherApi::Error)
+        expect{subject}.not_to raise_error
       end
     end
 

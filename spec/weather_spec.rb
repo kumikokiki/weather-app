@@ -8,7 +8,7 @@ feature "Weather app home page" do
   scenario "user accesses the page without any input" do
     expect(page).to have_selector("#forecast_request_location", :text => "Sydney")
     expect(page).to have_selector("#forecast_temp_unit", :text => "CELSIUS")
-    page.should have_no_css('table')
+    expect(page).to have_no_css('table')
     expect(page).to have_no_content("Temperature")
   end
 
@@ -16,7 +16,7 @@ feature "Weather app home page" do
     select('Sydney', :from => 'forecast_request_location')
     select('CELSIUS', :from => 'forecast_temp_unit')
     click_on('Refresh')
-    page.should have_css('table')
+    expect(page).to have_css('table')
     expect(page).to have_content("Conditions for Sydney")
     expect(page).to have_content("°C")
     expect(page).to have_no_content("°F")
@@ -27,7 +27,7 @@ feature "Weather app home page" do
     select('Melbourne', :from => 'forecast_request_location')
     select('FAHRENHEIT', :from => 'forecast_temp_unit')
     click_on('Refresh')
-    page.should have_css('table')
+    expect(page).to have_css('table')
     expect(page).to have_content("Conditions for Melbourne,")
     expect(page).to have_content("°F")
     expect(page).to have_no_content("°C")

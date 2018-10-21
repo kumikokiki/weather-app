@@ -1,0 +1,130 @@
+{
+	"units": {
+	"distance": "km",
+	"pressure": "mb",
+	"speed": "km/h",
+	"temperature": "C"
+	},
+	"location": {
+	"city": "Sydney",
+	"country": "Australia",
+	"region": " NSW"
+	},
+	"wind": {
+	"chill": "63",
+	"direction": "135",
+	"speed": "28.97"
+	},
+	"atmosphere": {
+	"humidity": "66",
+	"pressure": "34236.40",
+	"rising": "0",
+	"visibility": "25.91"
+	},
+	"astronomy": {
+	"sunrise": "6: 7 am",
+	"sunset": "7: 14 pm"
+	},
+	"image": {
+	"title": "Yahoo! Weather",
+	"width": "142",
+	"height": "18",
+	"link": "http: //weather.yahoo.com",
+	"url": "http: //l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+	},
+	"item": {
+		"code": "34",
+		"date": "21 Oct 2018 05: 00 PM AEDT",
+		"day": "Sun",
+		"temp": "17",
+		"text": "Mostly Sunny",
+		"condition": {
+		"code": "34",
+		"date": "21 Oct 2018 05: 00 PM AEDT",
+		"day": "Sun",
+		"temp": "17",
+		"text": "Mostly Sunny"
+		},
+		"forecast": [
+		{
+			"code": "47",
+			"date": "21 Oct 2018",
+			"day": "Sun",
+			"high": "19",
+			"low": "12",
+			"text": "Scattered Thunderstorms"
+		},
+		{
+			"code": "32",
+			"date": "22 Oct 2018",
+			"day": "Mon",
+			"high": "23",
+			"low": "11",
+			"text": "Sunny"
+		},
+		{
+			"code": "30",
+			"date": "23 Oct 2018",
+			"day": "Tue",
+			"high": "28",
+			"low": "11",
+			"text": "Partly Cloudy"
+		},
+		{
+			"code": "28",
+			"date": "24 Oct 2018",
+			"day": "Wed",
+			"high": "18",
+			"low": "15",
+			"text": "Mostly Cloudy"
+		},
+		{
+			"code": "28",
+			"date": "25 Oct 2018",
+			"day": "Thu",
+			"high": "22",
+			"low": "14",
+			"text": "Mostly Cloudy"
+		},
+		{
+			"code": "26",
+			"date": "26 Oct 2018",
+			"day": "Fri",
+			"high": "30",
+			"low": "14",
+			"text": "Cloudy"
+		},
+		{
+			"code": "28",
+			"date": "27 Oct 2018",
+			"day": "Sat",
+			"high": "22",
+			"low": "13",
+			"text": "Mostly Cloudy"
+		},
+		{
+			"code": "11",
+			"date": "28 Oct 2018",
+			"day": "Sun",
+			"high": "19",
+			"low": "17",
+			"text": "Showers"
+		},
+		{
+			"code": "47",
+			"date": "29 Oct 2018",
+			"day": "Mon",
+			"high": "21",
+			"low": "17",
+			"text": "Scattered Thunderstorms"
+		},
+		{
+			"code": "30",
+			"date": "30 Oct 2018",
+			"day": "Tue",
+			"high": "22",
+			"low": "16",
+			"text": "Partly Cloudy"
+		}]
+	}
+}
